@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+	<style>
+		table, tr, td {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body> 
+<table id="customTable" width="100%"></table>
+<script>
+	var c = parseInt(prompt("Columns"));
+	var r = parseInt(prompt("Rows"));
+	var table = document.getElementById("customTable");
+
+	for (var i = 0; i < r; i++) {
+		var newRow = document.createElement("tr");
+		for (var j = 0; j < c; j++) {
+			var newColumn = document.createElement("td");
+			newRow.appendChild(newColumn);
+		}
+		table.appendChild(newRow);
+	}
+</script>
+</body>
+ </html>
